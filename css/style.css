@@ -1,0 +1,187 @@
+/* ===============================================
+
+style.css
+zentrales Stylesheet zum Importieren der module
+wird in den HTML-dateien per <link> eingebunden
+
+=============================================== */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #dee6ef
+}
+
+@import url(basis.css);
+@import url(layout.css);
+@import url(navigation.css);
+@import url(content.css);
+
+/* TEXT + FONTS */
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+nav {
+    font-size: 1.2rem;
+}
+
+
+/* CONTAINERS + PLACEMENT */
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.mid {
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.l {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.banner {
+    background-color: rgb(85, 108, 140);
+    justify-content: space-around;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+}
+
+#kalender {
+    background-image: url(https://picsum.photos/1200/400);
+    color: white;
+}
+
+/* NAVBAR */
+
+ul, a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.burger-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.burger-btn span {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    display: block;
+}
+
+header {
+    height: 0;
+}
+
+nav {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+
+
+}
+
+#logo {
+    text-align: center;
+    margin-top:0;
+}
+
+.nav {
+    text-align: center;
+    display:flex;
+    margin: 0;
+}
+
+.nav li {
+    flex: 1;
+    display: inline;
+}
+
+/* IMAGES */
+
+/* MEDIA QUERIES */
+
+/* Navbar */
+
+
+@media (min-width: 768px) {
+  nav {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  nav {
+    width: 970px;
+  }
+  .burger-btn span {
+    display: none;
+  }
+
+  header {
+    background-color: rgb(56, 57, 71);
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+
+}
+
+@media (min-width: 1200px) {
+  nav {
+    width: 1170px;
+  }
+
+  header {
+    height: 70px;
+  }
+
+}
